@@ -1,0 +1,152 @@
+*{/*universal selector*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;/*change the box model so the border and the padding
+	are no longer added to the total width or the total height specified to 
+	the total box*/
+}
+
+/*set font propert to the body*/
+body{
+	font-family: "Comic Sans MS", cursive, sans-serif;/*if comic sans is not
+	 available i can use sans serif*/
+	font-weight: 250;
+	font-size: 16px;
+	line-height: 1.7;/*1.7 times bigger than the predefined line height*/
+	color: black;
+	padding: 40px;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: white;
+	font-size: 2rem;
+}
+.header{
+	height: 95vh;/*every point this height of this element should be 95% of 
+	the viewport height because i don't want it 100%*/
+	background-image:url(../imgs/code1.jpg);
+	background-size: cover;
+	background-position: bottom;
+
+	clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
+	/*use clip-path to clip out part of the image.specify polygon in which the 
+	image will still be visible.use polygon function and use co-ordinates to 
+	define the polygon.(top left &right, bottom right& left(clockwise direction))
+	top left to right, top left to bottom left(no change in x and y)|->
+    from top-left to top right change in x 100% no vhange in y
+    |- .
+    x is 100% and y is 75% of viewport height.
+    x is back to 0. this side is thevreference n y is 100%*/
+
+}
+.text{
+	position: absolute;
+	top: 4%;
+	left: 30%;
+	/*background-color: black;*/
+	text-align: center;/*add text in box in the center*/
+	
+}
+.primary-heading{
+	display: block;/*a span element is by default an inline element.
+	just like text. so we use display block to get it in diff lines.*/
+    font-size: 40px;
+    font-weight: 120;
+    letter-spacing: 10px;
+
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+    animation-delay: 3s;/*waits 3 seconds to show on screen*/
+}
+
+@keyframes moveInLeft {
+	0%{
+       opacity: 0;/*invisible*/
+       transform: translateX(-100px);
+       /*the direction goes from left to right.neg value means it goes
+        to the left. pos means it goes to the right*/
+	}
+	80%{
+
+	}
+	100%{
+    opacity: 1;
+    transform: translateX();
+    /*we use 0 to make it look still */
+	}
+}
+/*Nav bar*/
+.container{
+	height: 10px;
+	width: 10px;
+
+
+	min-height: 7rem; 
+	display: flex;
+}
+.sidebar{
+	flex:0 0 10%;
+	color: white;
+	display: flex;
+	flex-direction: left-to-right;
+	margin-top: 10rem;
+}
+
+.side-nav {
+	border-radius: 100%;
+	background-color: black;
+	display: block;
+	margin: 2rem;
+
+}
+/*ABOUT PAGE*/
+*{
+	    	margin: 0;
+	    }
+
+		
+		#pic1{
+			width: 350px;
+			height: 350px;
+			background:url(../imgs/samm.jpg);
+			padding: 30px; 
+			/* border-radius: 300px; */
+			background-size: cover;
+			/* background-repeat: no-repeat; */
+		}
+		#parent1{
+            display: flex;
+           
+            padding: 50px;
+		}
+		.babydivs1{
+			flex: 1;
+		
+		}
+		#text1{
+			flex: 2;
+			padding: 50px;
+			height: 150px;
+		}
+
+/*GALLERY*/
+.flex-container {
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: DodgerBlue;
+  }
+  
+  .flex-container > {
+	background-color: #f1f1f1;
+	width: 100px;
+	margin: 10px;
+	text-align: center;
+	line-height: 75px;
+	font-size: 30px;
+  }
+  .pop, a:visited{
+
+	  color: grey;
+  }
